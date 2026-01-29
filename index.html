@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="강서 비즈니스 라운지 - 마곡, 화곡 프리미엄 회식장소. 고급스러운 비즈니스 라운지, 회의실, 프라이빗 공간. 강서구 최고의 비즈니스 라운지 예약 문의." />
+    <meta name="keywords" content="강서 비즈니스 라운지, 마곡 회식장소, 화곡 비즈니스 라운지, 강서구 프리미엄 라운지, 회의실 대여, 비즈니스 공간" />
+    <title>강서 비즈니스 라운지 | 마곡·화곡 프리미엄 회식장소</title>
+    <meta property="og:title" content="강서 비즈니스 라운지 - 프리미엄 비즈니스 공간" />
+    <meta property="og:description" content="마곡, 화곡 지역 최고의 프리미엄 비즈니스 라운지. 고급스러운 인테리어와 완벽한 서비스." />
+    <meta property="og:image" content="/hero-royal-lounge.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #0f1419;
+            color: #e8e6e1;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #e0c158;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            color: #e8e6e1;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, rgba(15, 20, 25, 0.7), rgba(30, 40, 50, 0.7)), url('/hero-royal-lounge.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            color: #ffffff;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f1419;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #e0c158;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Sticky Phone Button */
+        .sticky-phone {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #d4af37;
+            color: #0f1419;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .sticky-phone:hover {
+            background: #e0c158;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #0f1419 0%, #1a2530 100%);
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #d4af37;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #c9c7c2;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: #0f1419;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #d4af37;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #d4af37;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .feature-card p {
+            color: #c9c7c2;
+            line-height: 1.8;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #1a2530 0%, #0f1419 100%);
+        }
+
+        .gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #d4af37;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #0f1419;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #d4af37;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-top: 3px solid #d4af37;
+        }
+
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .contact-item p {
+            color: #c9c7c2;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0d11;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        footer a {
+            color: #d4af37;
+        }
+
+        /* Backlink Section */
+        .backlink-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            text-align: center;
+        }
+
+        .backlink-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #d4af37;
+        }
+
+        .backlink-section p {
+            color: #c9c7c2;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .backlink-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f1419;
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .backlink-button:hover {
+            background: #e0c158;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav h1 {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 60px;
+                padding: 4rem 1rem;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .sticky-phone {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.8rem 1.2rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>강서 비즈니스 라운지</h1>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#about">소개</a>
+                <a href="#features">특징</a>
+                <a href="#gallery">갤러리</a>
+                <a href="#contact">연락처</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sticky Phone Button -->
+    <button class="sticky-phone" onclick="window.location.href='tel:010-3778-6425'">📞 예약 문의</button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>강서 No.1 프리미엄 라운지</h1>
+        <p>마곡·화곡 지역 최고의 비즈니스 공간</p>
+        <button class="cta-button" onclick="window.location.href='tel:010-3778-6425'">지금 예약하기</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>강서 비즈니스 라운지에 대해</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>프리미엄 비즈니스 공간의 새로운 기준</h3>
+                    <p>강서 비즈니스 라운지는 마곡과 화곡 지역에 위치한 프리미염 회식장소이자 비즈니스 라운지입니다. 고급스러운 인테리어와 완벽한 서비스로 당신의 비즈니스 미팅과 회식을 더욱 특별하게 만들어드립니다.</p>
+                    <p>강서구 최고의 비즈니스 라운지로서, 우리는 정직한 가격 정책과 프리미엄 서비스를 제공합니다. 회의실, 프라이빗 공간, 라운지 등 다양한 공간을 갖추고 있어 모든 비즈니스 니즈를 충족시킬 수 있습니다.</p>
+                    <p>24시간 운영으로 언제든 편하게 방문하실 수 있으며, 전문 스태프가 최고의 서비스를 제공합니다.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/lounge-seating.png" alt="강서 비즈니스 라운지 라운지 공간" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>우리의 특징</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>프리미엄 인테리어</h3>
+                    <p>다크 네이비와 차콜 그레이 배경에 골드 포인트를 사용한 고급스러운 공간. 세련된 디자인으로 모든 비즈니스 미팅을 완벽하게 지원합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>다양한 공간</h3>
+                    <p>프라이빗 라운지, 회의실, 미팅 공간 등 다양한 용도의 공간을 제공합니다. 소규모 미팅부터 대규모 행사까지 모든 것을 준비할 수 있습니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>24시간 운영</h3>
+                    <p>강서구청 근처에 위치한 우리는 24시간 운영으로 언제든 방문 가능합니다. 긴급한 비즈니스 미팅도 언제든 환영합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>프리미엄 서비스</h3>
+                    <p>전문 스태프가 최고의 서비스를 제공합니다. 음료, 안주, 편의시설 등 모든 것이 완벽하게 준비되어 있습니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>최고의 가성비</h3>
+                    <p>프리미엄 공간과 서비스를 합리적인 가격에 제공합니다. 강서구 최고의 비즈니스 라운지에서 최고의 가성비를 경험하세요.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>편리한 위치</h3>
+                    <p>강서구청 근처, 마곡과 화곡 지역의 중심에 위치하고 있습니다. 대중교통으로도 쉽게 접근 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>갤러리</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/meeting-room.png" alt="강서 비즈니스 라운지 회의실" />
+                </div>
+                <div class="gallery-item">
+                    <img src="/entrance-lounge.png" alt="강서 비즈니스 라운지 입구" />
+                </div>
+                <div class="gallery-item">
+                    <img src="/amenities-detail.png" alt="강서 비즈니스 라운지 편의시설" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backlink Section -->
+    <section class="backlink-section">
+        <div class="container">
+            <h3>더 많은 정보를 원하시나요?</h3>
+            <p>강서셔츠룸의 프리미엄 비즈니스 라운지 서비스에 대해 더 알아보세요. 최고의 비즈니스 공간과 서비스를 경험할 수 있습니다.</p>
+            <a href="https://gangseoshirt.vercel.app/" class="backlink-button" target="_blank">강서셔츠룸 방문하기</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>연락처</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 전화</h3>
+                    <p><a href="tel:010-3778-6425">010-3778-6425</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 위치</h3>
+                    <p>강서구청 근처</p>
+                </div>
+                <div class="contact-item">
+                    <h3>⏰ 운영시간</h3>
+                    <p>24시간 운영</p>
+                </div>
+            </div>
+            <button class="cta-button" onclick="window.location.href='tel:010-3778-6425'">지금 예약하기</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 강서 비즈니스 라운지. All rights reserved. | <a href="https://gangseoshirt.vercel.app/">강서셔츠룸</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "business-lounge",
+  "version": "1.0.0",
+  "description": "강서 비즈니스 라운지 - 프리미엄 회식장소",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["강서", "비즈니스 라운지", "회식장소", "마곡", "화곡"],
+  "author": "",
+  "license": "MIT"
+}
