@@ -19,15 +19,21 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background: #0f1419;
             color: #e8e6e1;
-            line-height: 1.7;
+            line-height: 1.8;
             letter-spacing: 0.3px;
+            font-size: 16px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             color: #ffffff;
@@ -43,14 +49,20 @@
             color: #e0c158;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
         /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 20, 25, 0.95);
+            background: rgba(15, 20, 25, 0.98);
             backdrop-filter: blur(10px);
-            padding: 1.5rem 2rem;
+            padding: 1rem 1.5rem;
             z-index: 100;
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
@@ -59,32 +71,61 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         nav h1 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #d4af37;
             letter-spacing: 1px;
         }
 
+        nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
         nav a {
-            margin-left: 2rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #e8e6e1;
+            font-weight: 500;
+        }
+
+        /* Floating Phone Button */
+        .floating-phone {
+            position: fixed;
+            bottom: 2rem;
+            right: 1.5rem;
+            background: #d4af37;
+            color: #0f1419;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .floating-phone:hover {
+            background: #e0c158;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
         }
 
         /* Hero Section */
         .hero {
-            margin-top: 70px;
+            margin-top: 60px;
             background: linear-gradient(135deg, rgba(15, 20, 25, 0.7), rgba(30, 40, 50, 0.7)), url('/hero-royal-lounge.png');
             background-size: cover;
             background-position: center;
-            padding: 8rem 2rem;
+            padding: 4rem 1.5rem;
             text-align: center;
             color: #ffffff;
-            min-height: 600px;
+            min-height: 450px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -92,14 +133,15 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            line-height: 1.3;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #d4af37;
             margin-bottom: 2rem;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
@@ -109,12 +151,14 @@
             display: inline-block;
             background: #d4af37;
             color: #0f1419;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 0.5rem;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -123,299 +167,262 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         }
 
-        /* Sticky Phone Button */
-        .sticky-phone {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #d4af37;
-            color: #0f1419;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            cursor: pointer;
-            z-index: 50;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s;
-            border: none;
-            font-size: 0.95rem;
-        }
-
-        .sticky-phone:hover {
-            background: #e0c158;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 6rem 2rem;
-            background: linear-gradient(180deg, #0f1419 0%, #1a2530 100%);
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: #d4af37;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: #c9c7c2;
-            line-height: 1.8;
-        }
-
-        .about-image {
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
+        /* Card Section */
+        .card-section {
+            padding: 3rem 1.5rem;
             background: #0f1419;
         }
 
-        .features h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
             text-align: center;
             color: #d4af37;
         }
 
-        .feature-grid {
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .feature-card {
+        .card {
             background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
-            padding: 2rem;
-            border-radius: 0.5rem;
-            border-left: 4px solid #d4af37;
-            transition: all 0.3s;
+            border-radius: 0.8rem;
+            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        .feature-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.3);
         }
 
-        .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #d4af37;
-        }
-
-        .feature-card p {
-            color: #c9c7c2;
-            line-height: 1.8;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 6rem 2rem;
-            background: linear-gradient(180deg, #1a2530 0%, #0f1419 100%);
-        }
-
-        .gallery h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: #d4af37;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            aspect-ratio: 1;
-        }
-
-        .gallery-item img {
+        .card-image {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: transform 0.3s;
+            display: block;
         }
 
-        .gallery-item:hover img {
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #d4af37;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #c9c7c2;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f1419;
+            padding: 0.7rem 1.5rem;
+            border-radius: 0.4rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .card-link:hover {
+            background: #e0c158;
             transform: scale(1.05);
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background: #0f1419;
-            text-align: center;
+        /* Feature Icons */
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
 
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #d4af37;
+        /* About Section */
+        .about-section {
+            padding: 3rem 1.5rem;
+            background: linear-gradient(180deg, #0f1419 0%, #1a2530 100%);
         }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-item {
+        .about-card {
             background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
             padding: 2rem;
-            border-radius: 0.5rem;
-            border-top: 3px solid #d4af37;
+            border-radius: 0.8rem;
+            border-left: 4px solid #d4af37;
+            margin-bottom: 2rem;
         }
 
-        .contact-item h3 {
+        .about-card h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
             color: #d4af37;
         }
 
+        .about-card p {
+            color: #c9c7c2;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 3rem 1.5rem;
+            background: #0f1419;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            border-top: 3px solid #d4af37;
+            text-align: center;
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #d4af37;
+        }
+
         .contact-item p {
             color: #c9c7c2;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a {
+            font-weight: 700;
         }
 
         /* Footer */
         footer {
             background: #0a0d11;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             color: #888;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
+            font-size: 0.9rem;
         }
 
         footer a {
             color: #d4af37;
         }
 
-        /* Backlink Section */
-        .backlink-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
-            text-align: center;
-        }
-
-        .backlink-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #d4af37;
-        }
-
-        .backlink-section p {
-            color: #c9c7c2;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .backlink-button {
-            display: inline-block;
-            background: #d4af37;
-            color: #0f1419;
-            padding: 0.8rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .backlink-button:hover {
-            background: #e0c158;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-
         /* Mobile Optimization */
         @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
             nav {
-                padding: 1rem;
+                padding: 0.8rem 1rem;
             }
 
             nav h1 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+
+            nav .nav-links {
+                gap: 0.8rem;
             }
 
             nav a {
-                display: none;
+                font-size: 0.8rem;
             }
 
             .hero {
-                margin-top: 60px;
-                padding: 4rem 1rem;
-                min-height: 400px;
+                margin-top: 55px;
+                padding: 3rem 1rem;
+                min-height: 350px;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .hero p {
                 font-size: 1rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
             }
 
-            .feature-grid {
+            .card-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .card-image {
+                height: 180px;
             }
 
-            .contact-info {
-                grid-template-columns: 1fr;
+            .card-content {
+                padding: 1.5rem;
             }
 
-            .sticky-phone {
-                bottom: 1rem;
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .floating-phone {
+                bottom: 1.5rem;
                 right: 1rem;
                 padding: 0.8rem 1.2rem;
                 font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav h1 {
+                font-size: 1rem;
+            }
+
+            nav .nav-links {
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .card h3 {
+                font-size: 1.1rem;
+            }
+
+            .floating-phone {
+                padding: 0.7rem 1rem;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -424,19 +431,18 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <h1>강서 비즈니스 라운지</h1>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#about">소개</a>
+            <h1>강서 애플</h1>
+            <div class="nav-links">
+                <a href="/">홈</a>
                 <a href="/hwagok">화곡</a>
                 <a href="/magok">마곡</a>
                 <a href="/balsan">발산</a>
-                <a href="#contact">연락처</a>
             </div>
         </div>
     </nav>
 
-    <!-- Sticky Phone Button -->
-    <button class="sticky-phone" onclick="window.location.href='tel:010-3778-6425'">📞 예약 문의</button>
+    <!-- Floating Phone Button -->
+    <button class="floating-phone" onclick="window.location.href='tel:010-3778-6425'">📞 실시간 전화문의</button>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -446,121 +452,139 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about-section">
         <div class="container">
-            <h2>강서 비즈니스 라운지에 대해</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>프리미엄 비즈니스 공간의 새로운 기준</h3>
-                    <p>강서 비즈니스 라운지는 마곡과 화곡 지역에 위치한 프리미염 회식장소이자 비즈니스 라운지입니다. 고급스러운 인테리어와 완벽한 서비스로 당신의 비즈니스 미팅과 회식을 더욱 특별하게 만들어드립니다.</p>
-                    <p>강서구 최고의 비즈니스 라운지로서, 우리는 정직한 가격 정책과 프리미엄 서비스를 제공합니다. 회의실, 프라이빗 공간, 라운지 등 다양한 공간을 갖추고 있어 모든 비즈니스 니즈를 충족시킬 수 있습니다.</p>
-                    <p>24시간 운영으로 언제든 편하게 방문하실 수 있으며, 전문 스태프가 최고의 서비스를 제공합니다.</p>
+            <h2 class="section-title">강서 애플에 대해</h2>
+            <div class="about-card">
+                <div class="feature-icon">✨</div>
+                <h3>프리미엄 인테리어</h3>
+                <p>다크 네이비와 차콜 그레이 배경에 골드 포인트를 사용한 고급스러운 공간. 세련된 디자인으로 모든 비즈니스 미팅을 완벽하게 지원합니다.</p>
+            </div>
+            <div class="about-card">
+                <div class="feature-icon">🎯</div>
+                <h3>투명한 주대</h3>
+                <p>숨겨진 비용 없이 명확한 가격 정책으로 운영합니다. 모든 고객에게 동일한 기준의 프리미엄 서비스를 제공하는 것이 우리의 약속입니다.</p>
+            </div>
+            <div class="about-card">
+                <div class="feature-icon">⏰</div>
+                <h3>24시간 운영</h3>
+                <p>강서구청 근처에 위치한 우리는 24시간 운영으로 언제든 방문 가능합니다. 긴급한 비즈니스 미팅도 언제든 환영합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Cards Section -->
+    <section class="card-section">
+        <div class="container">
+            <h2 class="section-title">지역별 서비스 안내</h2>
+            <div class="card-grid">
+                <!-- Hwagok Card -->
+                <div class="card">
+                    <img src="/lounge-seating.png" alt="화곡 비즈니스 라운지" class="card-image" />
+                    <div class="card-content">
+                        <h3>화곡 지역</h3>
+                        <p class="card-subtitle">화곡동 비즈니스 라운지</p>
+                        <p>화곡 지역의 비즈니스 커뮤니티를 위해 설계된 프리미엄 공간. 프라이빗한 라운지에서 중요한 미팅을 진행하거나, 팀 회식을 통해 팀 빌딩을 할 수 있습니다.</p>
+                        <a href="/hwagok" class="card-link">상세보기</a>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <img src="/lounge-seating.png" alt="강서 비즈니스 라운지 라운지 공간" />
+
+                <!-- Magok Card -->
+                <div class="card">
+                    <img src="/meeting-room.png" alt="마곡 비즈니스 라운지" class="card-image" />
+                    <div class="card-content">
+                        <h3>마곡 지역</h3>
+                        <p class="card-subtitle">마곡 프리미엄 회식장소</p>
+                        <p>마곡지구의 신도시 중심에 위치한 최신식 시설. 프라이빗 라운지, 회의실, 미팅 공간 등 다양한 용도의 공간을 제공합니다.</p>
+                        <a href="/magok" class="card-link">상세보기</a>
+                    </div>
+                </div>
+
+                <!-- Balsan Card -->
+                <div class="card">
+                    <img src="/entrance-lounge.png" alt="발산 비즈니스 라운지" class="card-image" />
+                    <div class="card-content">
+                        <h3>발산 지역</h3>
+                        <p class="card-subtitle">발산역 투명한 시스템</p>
+                        <p>발산역 근처의 교통 중심지에 위치. 투명한 가격 정책으로 유명하며, 모든 고객에게 동일한 기준의 프리미엄 서비스를 제공합니다.</p>
+                        <a href="/balsan" class="card-link">상세보기</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="features">
+    <section class="about-section">
         <div class="container">
-            <h2>우리의 특징</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>프리미엄 인테리어</h3>
-                    <p>다크 네이비와 차콜 그레이 배경에 골드 포인트를 사용한 고급스러운 공간. 세련된 디자인으로 모든 비즈니스 미팅을 완벽하게 지원합니다.</p>
+            <h2 class="section-title">우리의 특징</h2>
+            <div class="card-grid">
+                <div class="about-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>최신 음향 시스템</h3>
+                    <p>최고 수준의 음향 장비로 완벽한 사운드 환경을 제공합니다.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>다양한 공간</h3>
-                    <p>프라이빗 라운지, 회의실, 미팅 공간 등 다양한 용도의 공간을 제공합니다. 소규모 미팅부터 대규모 행사까지 모든 것을 준비할 수 있습니다.</p>
+                <div class="about-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>전문 스태프</h3>
+                    <p>20명 이상의 매니저가 항시 대기하여 최고의 서비스를 제공합니다.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>24시간 운영</h3>
-                    <p>강서구청 근처에 위치한 우리는 24시간 운영으로 언제든 방문 가능합니다. 긴급한 비즈니스 미팅도 언제든 환영합니다.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>프리미엄 서비스</h3>
-                    <p>전문 스태프가 최고의 서비스를 제공합니다. 음료, 안주, 편의시설 등 모든 것이 완벽하게 준비되어 있습니다.</p>
-                </div>
-                <div class="feature-card">
+                <div class="about-card">
+                    <div class="feature-icon">💰</div>
                     <h3>최고의 가성비</h3>
-                    <p>프리미엄 공간과 서비스를 합리적인 가격에 제공합니다. 강서구 최고의 비즈니스 라운지에서 최고의 가성비를 경험하세요.</p>
+                    <p>프리미엄 공간과 서비스를 합리적인 가격에 제공합니다.</p>
                 </div>
-                <div class="feature-card">
+                <div class="about-card">
+                    <div class="feature-icon">📍</div>
                     <h3>편리한 위치</h3>
-                    <p>강서구청 근처, 마곡과 화곡 지역의 중심에 위치하고 있습니다. 대중교통으로도 쉽게 접근 가능합니다.</p>
+                    <p>강서구청 근처, 마곡과 화곡 지역의 중심에 위치합니다.</p>
+                </div>
+                <div class="about-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>다양한 공간</h3>
+                    <p>소규모 미팅부터 대규모 행사까지 모든 것을 준비할 수 있습니다.</p>
+                </div>
+                <div class="about-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>빠른 응대</h3>
+                    <p>모든 요청에 신속하고 정성스럽게 대응합니다.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2>갤러리</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="/meeting-room.png" alt="강서 비즈니스 라운지 회의실" />
-                </div>
-                <div class="gallery-item">
-                    <img src="/entrance-lounge.png" alt="강서 비즈니스 라운지 입구" />
-                </div>
-                <div class="gallery-item">
-                    <img src="/amenities-detail.png" alt="강서 비즈니스 라운지 편의시설" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Regional Pages Section -->
-    <section class="backlink-section">
-        <div class="container">
-            <h3>지역별 서비스 안내</h3>
-            <p>강서구의 각 지역에서 강서 애플의 프리미엄 비즈니스 라운지를 경험하세요. 화곡, 마곡, 발산 지역의 최고의 회식장소와 비즈니스 공간을 제공합니다.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                <a href="/hwagok" class="backlink-button">화곡 지역 안내</a>
-                <a href="/magok" class="backlink-button">마곡 지역 안내</a>
-                <a href="/balsan" class="backlink-button">발산 지역 안내</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Backlink Section -->
-    <section class="backlink-section" style="background: linear-gradient(135deg, #0f1419 0%, #1a2530 100%);">
-        <div class="container">
-            <h3>더 많은 정보를 원하시나요?</h3>
-            <p>강서셔츠룸의 프리미엄 비즈니스 라운지 서비스에 대해 더 알아보세요. 최고의 비즈니스 공간과 서비스를 경험할 수 있습니다.</p>
-            <a href="https://gangseoshirt.vercel.app/" class="backlink-button" target="_blank">강서셔츠룸 방문하기</a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact-section">
         <div class="container">
-            <h2>연락처</h2>
-            <div class="contact-info">
+            <h2 class="section-title">연락처</h2>
+            <div class="contact-grid">
                 <div class="contact-item">
-                    <h3>📞 전화</h3>
+                    <h4>📞 전화</h4>
                     <p><a href="tel:010-3778-6425">010-3778-6425</a></p>
                 </div>
                 <div class="contact-item">
-                    <h3>📍 위치</h3>
+                    <h4>📱 카카오톡</h4>
+                    <p><a href="https://open.kakao.com/o/inhighg" target="_blank">inhighg</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>📍 위치</h4>
                     <p>강서구청 근처</p>
                 </div>
                 <div class="contact-item">
-                    <h3>⏰ 운영시간</h3>
+                    <h4>⏰ 운영시간</h4>
                     <p>24시간 운영</p>
                 </div>
             </div>
-            <button class="cta-button" onclick="window.location.href='tel:010-3778-6425'">지금 예약하기</button>
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="window.location.href='tel:010-3778-6425'">지금 예약하기</button>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 강서 비즈니스 라운지. All rights reserved. | <a href="https://gangseoshirt.vercel.app/">강서셔츠룸</a></p>
+        <p>&copy; 2026 강서 애플. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: #666;"><a href="https://gangseoshirt.vercel.app/" target="_blank">강서셔츠룸</a> | <a href="/hwagok">화곡</a> | <a href="/magok">마곡</a> | <a href="/balsan">발산</a></p>
     </footer>
 </body>
 </html>
