@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="마곡 셔츠룸 시설 및 예약 안내. 마곡 지역 프리미엄 비즈니스 라운지. 강서 애플에서 최고의 서비스를 경험하세요." />
-    <meta name="keywords" content="마곡 셔츠룸, 마곡 비즈니스 라운지, 마곡 회식장소, 강서 애플, 마곡 가라오케, 마곡 노래방" />
-    <title>마곡 셔츠룸 시설 및 예약 안내</title>
-    <meta property="og:title" content="마곡 셔츠룸 예약 안내 - 강서 애플" />
-    <meta property="og:description" content="마곡 지역 프리미엄 비즈니스 라운지. 최신 시설과 최고의 서비스." />
+    <meta name="description" content="마곡 프리미엄 셔츠 - 강서 애플. 정찰제 주대, 최신 음향 시스템, 24시간 운영. 마곡 신도시 최고의 셔츠 서비스." />
+    <meta name="keywords" content="마곡 셔츠, 마곡 프리미엄 셔츠, 마곡 정찰제, 마곡 주대, 마곡 셔츠룸" />
+    <title>마곡 셔츠룸 시설 및 예약 안내 | 강서 애플</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -18,24 +16,20 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background: #0f1419;
+            background: #0a0d11;
             color: #e8e6e1;
-            line-height: 1.8;
-            letter-spacing: 0.3px;
+            line-height: 1.9;
+            letter-spacing: 0.5px;
             font-size: 16px;
+            font-weight: 500;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+        h1, h2, h3 {
+            font-weight: 900;
             color: #ffffff;
+            letter-spacing: 0.8px;
         }
 
         a {
@@ -49,7 +43,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
@@ -59,11 +53,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 20, 25, 0.98);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 13, 17, 0.98);
             padding: 1rem 1.5rem;
             z-index: 100;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
         }
 
         nav .container {
@@ -73,21 +66,21 @@
         }
 
         nav h1 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #d4af37;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-weight: 900;
         }
 
         nav .nav-links {
             display: flex;
             gap: 1.5rem;
-            align-items: center;
         }
 
         nav a {
             font-size: 0.9rem;
             color: #e8e6e1;
-            font-weight: 500;
+            font-weight: 700;
         }
 
         /* Floating Phone Button */
@@ -96,34 +89,31 @@
             bottom: 2rem;
             right: 1.5rem;
             background: #d4af37;
-            color: #0f1419;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
+            color: #0a0d11;
+            padding: 1.2rem 1.8rem;
+            border-radius: 0.6rem;
+            font-weight: 900;
             cursor: pointer;
             z-index: 50;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
             transition: all 0.3s;
             border: none;
-            font-size: 0.95rem;
+            font-size: 1rem;
             white-space: nowrap;
+            letter-spacing: 0.5px;
         }
 
         .floating-phone:hover {
             background: #e0c158;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-5px);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             margin-top: 60px;
-            background: linear-gradient(135deg, rgba(15, 20, 25, 0.7), rgba(30, 40, 50, 0.7)), url('/meeting-room.png');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(10, 13, 17, 0.8), rgba(30, 40, 50, 0.8));
             padding: 4rem 1.5rem;
             text-align: center;
-            color: #ffffff;
             min-height: 350px;
             display: flex;
             flex-direction: column;
@@ -134,159 +124,195 @@
         .hero h1 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            letter-spacing: 1px;
-            line-height: 1.3;
+            color: #d4af37;
+            letter-spacing: 2px;
         }
 
         .hero p {
             font-size: 1.1rem;
-            color: #d4af37;
+            color: #e8e6e1;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #d4af37;
-            color: #0f1419;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background: #e0c158;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            font-weight: 600;
         }
 
         /* Content Section */
-        .content-section {
+        .content {
             padding: 3rem 1.5rem;
-            background: #0f1419;
         }
 
         .section-title {
             font-size: 1.8rem;
-            margin-bottom: 2.5rem;
-            text-align: center;
+            margin-bottom: 2rem;
             color: #d4af37;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
-        .content-text {
+        .info-text {
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 3rem;
+            line-height: 2;
+        }
+
+        .info-text p {
+            margin-bottom: 1.5rem;
+            color: #c9c7c2;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .info-text strong {
+            color: #d4af37;
+            font-weight: 900;
+        }
+
+        /* Bullet Points */
+        .bullet-list {
+            background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 3rem;
+        }
+
+        .bullet-list h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #d4af37;
+            font-weight: 900;
+        }
+
+        .bullet-list ul {
+            list-style: none;
+        }
+
+        .bullet-list li {
+            margin-bottom: 1.2rem;
+            color: #c9c7c2;
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.8;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .bullet-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
             background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
             padding: 2rem;
-            border-radius: 0.8rem;
-            border-left: 4px solid #d4af37;
-            margin-bottom: 2rem;
-        }
-
-        .content-text p {
-            color: #c9c7c2;
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .content-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .content-text strong {
-            color: #d4af37;
-        }
-
-        /* Internal Links Section */
-        .internal-links {
-            padding: 3rem 1.5rem;
-            background: linear-gradient(180deg, #0f1419 0%, #1a2530 100%);
-        }
-
-        .internal-links h3 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #d4af37;
+            border-radius: 1rem;
+            border-top: 4px solid #d4af37;
             text-align: center;
         }
 
-        .links-grid {
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            font-weight: 900;
+        }
+
+        .feature-card p {
+            color: #c9c7c2;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* Region Links */
+        .region-links {
+            background: linear-gradient(180deg, #0a0d11 0%, #1a2530 100%);
+            padding: 3rem 1.5rem;
+        }
+
+        .region-links h2 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #d4af37;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .region-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
 
-        .link-card {
+        .region-card {
             background: linear-gradient(135deg, #1a2530 0%, #0f1419 100%);
             padding: 1.5rem;
-            border-radius: 0.8rem;
+            border-radius: 1rem;
             border-top: 3px solid #d4af37;
             text-align: center;
-            transition: all 0.3s;
         }
 
-        .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
-        }
-
-        .link-card h4 {
+        .region-card h3 {
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #d4af37;
+            font-weight: 900;
         }
 
-        .link-card a {
+        .region-card a {
             display: inline-block;
             background: #d4af37;
-            color: #0f1419;
+            color: #0a0d11;
             padding: 0.7rem 1.5rem;
-            border-radius: 0.3rem;
-            font-weight: 700;
-            transition: all 0.3s;
+            border-radius: 0.4rem;
+            font-weight: 900;
             font-size: 0.9rem;
+            margin-top: 1rem;
         }
 
-        .link-card a:hover {
+        .region-card a:hover {
             background: #e0c158;
-            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
-            background: #0a0d11;
+            background: #050709;
             padding: 2rem 1.5rem;
             text-align: center;
             color: #888;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-top: 2px solid rgba(212, 175, 55, 0.1);
             font-size: 0.9rem;
+            font-weight: 500;
         }
 
         footer a {
             color: #d4af37;
+            font-weight: 700;
         }
 
-        /* Mobile Optimization */
+        /* Mobile */
         @media (max-width: 768px) {
             body {
                 font-size: 15px;
             }
 
-            nav {
-                padding: 0.8rem 1rem;
-            }
-
             nav h1 {
                 font-size: 1.1rem;
-            }
-
-            nav .nav-links {
-                gap: 0.8rem;
             }
 
             nav a {
@@ -295,8 +321,8 @@
 
             .hero {
                 margin-top: 55px;
-                padding: 3rem 1rem;
-                min-height: 300px;
+                padding: 2.5rem 1rem;
+                min-height: 280px;
             }
 
             .hero h1 {
@@ -308,24 +334,26 @@
             }
 
             .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
+                font-size: 1.4rem;
             }
 
-            .content-text {
+            .info-text {
+                padding: 1.8rem;
+            }
+
+            .features {
+                gap: 1.5rem;
+            }
+
+            .feature-card {
                 padding: 1.5rem;
-            }
-
-            .links-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
             }
 
             .floating-phone {
                 bottom: 1.5rem;
                 right: 1rem;
-                padding: 0.8rem 1.2rem;
-                font-size: 0.85rem;
+                padding: 1rem 1.4rem;
+                font-size: 0.9rem;
             }
         }
 
@@ -334,12 +362,8 @@
                 font-size: 1rem;
             }
 
-            nav .nav-links {
-                gap: 0.5rem;
-            }
-
             nav a {
-                font-size: 0.75rem;
+                font-size: 0.7rem;
             }
 
             .hero h1 {
@@ -347,21 +371,24 @@
             }
 
             .section-title {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+            }
+
+            .bullet-list li {
+                font-size: 0.9rem;
             }
 
             .floating-phone {
-                padding: 0.7rem 1rem;
-                font-size: 0.8rem;
+                padding: 0.9rem 1.2rem;
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="/" style="color: #d4af37; font-size: 1.3rem; font-weight: 700;">강서 애플</a>
+            <h1>강서 애플</h1>
             <div class="nav-links">
                 <a href="/">홈</a>
                 <a href="/hwagok">화곡</a>
@@ -371,65 +398,78 @@
         </div>
     </nav>
 
-    <!-- Floating Phone Button -->
     <button class="floating-phone" onclick="window.location.href='tel:010-3778-6425'">📞 010-3778-6425</button>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <h1>마곡 셔츠룸 & 프리미엄 라운지</h1>
-        <p>마곡 지역 최고의 비즈니스 공간</p>
-        <button class="cta-button" onclick="window.location.href='tel:010-3778-6425'">지금 예약하기</button>
+        <h1>마곡 프리미엄 셔츠</h1>
+        <p>마곡 신도시 최고의 정찰제 주대 서비스</p>
     </section>
 
-    <!-- Content Section -->
-    <section class="content-section">
+    <section class="content">
         <div class="container">
-            <h2 class="section-title">마곡 셔츠룸 시설 및 예약 안내</h2>
-            
-            <div class="content-text">
-                <p><strong>마곡 신도시 중심의 프리미엄 비즈니스 라운지</strong></p>
-                <p>마곡지구는 강서구의 신도시로, 최신 건물과 현대적인 인프라가 갖춰진 지역입니다. 마곡 지역에서 비즈니스 미팅, 회의, 팀 회식을 계획하고 계신다면, 강서 애플의 마곡 시설을 추천드립니다. 우리의 마곡 라운지는 최신식 인테리어와 최고 수준의 시설을 갖추고 있으며, 모든 비즈니스 활동에 최적화되어 있습니다.</p>
-                
-                <p><strong>마곡 최고의 시설과 서비스 품질</strong></p>
-                <p>강서 애플의 마곡 시설은 최신 음향 시스템, 프리미엄 인테리어, 그리고 다양한 크기의 라운지를 갖추고 있습니다. 소규모 팀 미팅부터 대규모 회사 행사까지 모든 규모의 비즈니스 활동을 지원할 수 있습니다. 마곡 지역의 기업들과 비즈니스 인사들이 신뢰하는 공간으로, 우리는 최고의 가성비와 서비스 품질을 보장합니다.</p>
-                
-                <p><strong>마곡에서의 완벽한 예약 시스템</strong></p>
-                <p>마곡 셔츠룸 예약은 매우 간단합니다. 전화 한 통으로 당신의 모든 요청을 처리할 수 있으며, 우리의 전문 스태프가 예약부터 서비스까지 모든 것을 완벽하게 준비합니다. 마곡 지역에서의 긴급한 비즈니스 미팅도 언제든 환영하며, 24시간 운영으로 당신의 모든 일정에 맞춰 서비스를 제공합니다.</p>
-                
-                <p><strong>마곡 지역 최고의 가성비 비즈니스 라운지</strong></p>
-                <p>마곡에서 프리미엄 비즈니스 공간을 찾고 계신다면, 강서 애플이 최고의 선택입니다. 투명한 가격 정책으로 숨겨진 비용 없이 명확한 가격을 제시하며, 모든 고객에게 동일한 기준의 최고 수준의 서비스를 제공합니다. 마곡 지역에서 가장 합리적인 가격으로 프리미엄 시설을 이용할 수 있는 곳은 강서 애플입니다. 지금 바로 예약하세요.</p>
+            <h2 class="section-title">마곡 지역 프리미엄 셔츠 안내</h2>
+
+            <div class="info-text">
+                <p><strong>마곡 프리미엄 셔츠</strong>는 강서구 마곡 신도시 지역에서 가장 신뢰할 수 있는 셔츠 서비스입니다. 정찰제 주대 시스템으로 투명한 가격을 제시하며, 모든 고객에게 동일한 기준의 최고 수준 서비스를 제공합니다.</p>
+
+                <p>마곡 지역의 많은 기업과 비즈니스 인사들이 신뢰하는 <strong>강서 애플의 마곡 프리미엄 셔츠</strong>는 최신 음향 시스템, 프리미엄 인테리어, 그리고 전문 스태프가 당신의 모든 요청에 완벽하게 대응할 것입니다.</p>
+
+                <p>우리는 <strong>정직함과 신뢰</strong>를 최우선으로 생각합니다. 숨겨진 비용이나 추가 요금 없이 명확한 가격을 제시하며, 모든 고객에게 동일한 기준의 최고 수준 서비스를 제공합니다. 마곡 지역에서 가장 신뢰할 수 있는 프리미엄 셔츠를 찾고 계신다면, 강서 애플이 최고의 선택입니다.</p>
+            </div>
+
+            <div class="bullet-list">
+                <h3>✨ 마곡 프리미엄 셔츠의 특징</h3>
+                <ul>
+                    <li><strong>정찰제 주대</strong> - 투명한 가격으로 숨겨진 비용 없음</li>
+                    <li><strong>최신 음향 시스템</strong> - 최상급 음질 보장</li>
+                    <li><strong>전문 스태프</strong> - 20명 이상의 매니저 항시 대기</li>
+                    <li><strong>프리미엄 인테리어</strong> - 고급스러운 공간 제공</li>
+                    <li><strong>24시간 운영</strong> - 언제든 이용 가능</li>
+                    <li><strong>다양한 공간</strong> - 소규모부터 대규모까지 선택 가능</li>
+                    <li><strong>최고의 가성비</strong> - 강서 지역 최고 수준의 서비스</li>
+                </ul>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🎯 정찰제 주대</h3>
+                    <p>투명한 가격 정책으로 모든 고객에게 동일한 기준의 서비스를 제공합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎤 최신 시스템</h3>
+                    <p>최신 음향 장비로 최고의 셔츠 경험을 제공합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 전문 스태프</h3>
+                    <p>젊고 매혹적인 매니저가 최고의 서비스를 제공합니다.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Internal Links Section -->
-    <section class="internal-links">
+    <section class="region-links">
         <div class="container">
-            <h3>강서구 전체 지역 안내</h3>
-            <div class="links-grid">
-                <div class="link-card">
-                    <h4>화곡 지역</h4>
-                    <p>화곡동 프리미엄 라운지</p>
+            <h2>강서 전역 프리미엄 셔츠</h2>
+            <div class="region-grid">
+                <div class="region-card">
+                    <h3>화곡 프리미엄 셔츠</h3>
                     <a href="/hwagok">화곡 상세보기</a>
                 </div>
-                <div class="link-card">
-                    <h4>마곡 지역</h4>
-                    <p>마곡 비즈니스 공간</p>
-                    <a href="/magok">마곡 상세보기</a>
-                </div>
-                <div class="link-card">
-                    <h4>발산 지역</h4>
-                    <p>발산역 투명한 시스템</p>
+                <div class="region-card">
+                    <h3>발산 프리미엄 셔츠</h3>
                     <a href="/balsan">발산 상세보기</a>
+                </div>
+                <div class="region-card">
+                    <h3>메인 페이지</h3>
+                    <a href="/">강서 애플</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 강서 애플. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; color: #666;"><a href="/">홈</a> | <a href="/hwagok">화곡</a> | <a href="/magok">마곡</a> | <a href="/balsan">발산</a></p>
+        <p><a href="/">홈</a> | <a href="/hwagok">화곡</a> | <a href="/magok">마곡</a> | <a href="/balsan">발산</a></p>
     </footer>
 </body>
 </html>
