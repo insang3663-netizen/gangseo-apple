@@ -1,5 +1,19 @@
 {
   "buildCommand": "echo 'Static site'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No dependencies'"
+  "installCommand": "echo 'No dependencies'",
+  "rewrites": [
+    {
+      "source": "/hwagok",
+      "destination": "/hwagok.html"
+    },
+    {
+      "source": "/magok",
+      "destination": "/magok.html"
+    },
+    {
+      "source": "/balsan",
+      "destination": "/balsan.html"
+    }
+  ]
 }
