@@ -1,8 +1,11 @@
 {
-  "buildCommand": "echo 'Static site'",
+  "version": 2,
+  "framework": null,
+  "buildCommand": "echo 'Static HTML site'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No dependencies'",
-  "cleanUrls": true,
+  "installCommand": "echo 'No install needed'",
+  "public": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
     {
@@ -10,27 +13,52 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate, no-cache"
+          "value": "public, max-age=0, must-revalidate, no-cache, no-store"
         },
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate, no-cache, no-store"
         }
       ]
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/hwagok",
-      "destination": "/hwagok.html"
+      "src": "/hwagok",
+      "dest": "/hwagok.html"
     },
     {
-      "source": "/magok",
-      "destination": "/magok.html"
+      "src": "/magok",
+      "dest": "/magok.html"
     },
     {
-      "source": "/balsan",
-      "destination": "/balsan.html"
+      "src": "/balsan",
+      "dest": "/balsan.html"
+    },
+    {
+      "src": "/(.*)\\.html$",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(?!.*\\.)",
+      "dest": "/index.html"
     }
   ]
 }
