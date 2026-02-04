@@ -1,10 +1,14 @@
 {
   "version": 2,
+  "env": {
+    "VERCEL_FORCE_NO_BUILD_CACHE": "1"
+  },
   "framework": null,
   "buildCommand": "echo 'Static HTML site'",
   "outputDirectory": ".",
   "installCommand": "echo 'No install needed'",
   "public": true,
+  "crons": [],
   "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
