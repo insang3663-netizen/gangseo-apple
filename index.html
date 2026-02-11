@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="강서 애플 셔츠룸 - 마곡/화곡 최고의 힐링 공간. 맞춤형 서비스, 친절한 스태프, 편안한 분위기" />
+    <meta name="keywords" content="강서애플셔츠룸,마곡셔츠룸,화곡노래방,강서가라오케,마곡가라오케,강서노래방,강서힐링공간" />
+    <meta name="google-site-verification" content="_7EPRXMWCjaJe5WfqYNQJhpWI3KiwO4j96nEqWRcG3s" />
+    <title>강서 애플 셔츠룸 - 마곡/화곡 최고의 힐링 공간</title>
+    <meta property="og:title" content="강서 애플 셔츠룸 - 마곡/화곡 최고의 힐링 공간" />
+    <meta property="og:description" content="강서 애플은 고객 한 분 한 분께 맞춤형 서비스를 제공합니다. 편안하고 즐거운 시간을 약속드립니다." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background: #0a0a0a;
+        color: #e8e8e8;
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: #d4af37;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        z-index: 50;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      }
+
+      nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      nav h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #d4af37;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #e8e8e8;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #d4af37;
+      }
+
+      .nav-phone {
+        background: #d4af37;
+        color: #0a0a0a;
+        padding: 0.6rem 1.2rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      .nav-phone:hover {
+        background: #e0c158;
+      }
+
+      .hero {
+        margin-top: 4rem;
+        padding: 4rem 0;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .hero-text h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+
+      .hero-text h3 {
+        font-size: 1.5rem;
+        color: #c0c0c0;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: #b0b0b0;
+        line-height: 1.8;
+      }
+
+      .hero-image {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        height: 350px;
+        position: relative;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+        z-index: 1;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #d4af37;
+        color: #0a0a0a;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: background 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        background: #e0c158;
+      }
+
+      .info-section {
+        margin: 4rem 0;
+        padding: 3rem 0;
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .info-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+      }
+
+      .info-card {
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 1.5rem;
+        border-radius: 8px;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .info-card:hover {
+        background: rgba(212, 175, 55, 0.1);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-5px);
+      }
+
+      .info-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-card p {
+        color: #b0b0b0;
+        font-size: 0.95rem;
+      }
+
+      .gallery-section {
+        margin: 4rem 0;
+        padding: 3rem 0;
+      }
+
+      .gallery-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .gallery-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .faq-section {
+        margin: 4rem 0;
+        padding: 3rem 0;
+        background: rgba(212, 175, 55, 0.08);
+        border-radius: 8px;
+      }
+
+      .faq-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .faq-item {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        padding-bottom: 1.5rem;
+      }
+
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #d4af37;
+        transition: color 0.3s;
+      }
+
+      .faq-question:hover {
+        color: #e0c158;
+      }
+
+      .faq-answer {
+        color: #b0b0b0;
+        margin-top: 1rem;
+        display: none;
+        font-size: 0.95rem;
+      }
+
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+
+      footer {
+        background: rgba(10, 10, 10, 0.8);
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 2rem 0;
+        text-align: center;
+        color: #b0b0b0;
+        margin-top: 4rem;
+      }
+
+      .footer-phone {
+        background: #d4af37;
+        color: #0a0a0a;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 1rem 0;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+
+      .footer-phone:hover {
+        background: #e0c158;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-text h2 {
+          font-size: 2rem;
+        }
+
+        .info-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        nav a {
+          margin-left: 1rem;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1>강서 애플</h1>
+        <div>
+          <a href="#services">서비스</a>
+          <a href="#gallery">갤러리</a>
+          <a href="#faq">FAQ</a>
+          <a href="tel:010-3778-6425" class="nav-phone">📞 예약</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2>강서 애플 셔츠룸</h2>
+            <h3>마곡/화곡 최고의 힐링 공간</h3>
+            <p>강서 애플은 고객 한 분 한 분께 맞춤형 서비스를 제공합니다. 복잡한 시스템 대신 편안하고 즐거운 시간을 약속드립니다. 마곡역 인근에서 가장 친절한 서비스를 경험해 보세요.</p>
+            <a href="tel:010-3778-6425" class="cta-button">지금 예약하기</a>
+          </div>
+          <div class="hero-image">
+            <img src="/apple-luxury.png" alt="강서 애플 셔츠룸 럭셔리 라운지" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section" id="services">
+      <div class="container">
+        <h2>강서 애플 서비스</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>🎵 최신 음향</h3>
+            <p>고급 음향 시스템</p>
+          </div>
+          <div class="info-card">
+            <h3>🛋️ 편안한 공간</h3>
+            <p>아늑한 인테리어</p>
+          </div>
+          <div class="info-card">
+            <h3>💰 합리적 가격</h3>
+            <p>투명한 요금제</p>
+          </div>
+          <div class="info-card">
+            <h3>🚇 마곡역 근처</h3>
+            <p>접근성 우수</p>
+          </div>
+          <div class="info-card">
+            <h3>🌙 항상 열려있어</h3>
+            <p>24시간 운영</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <h2>갤러리</h2>
+        <div class="gallery-grid">
+               <div class="gallery-item">
+            <img src="/apple-room-luxury.png" alt="강서 애플 프리미엄 라운지" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/apple-luxury.png" alt="강서 애플 분위기" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/apple-entrance.png" alt="강서 애플 입구" loading="lazy" />y" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2>자주 묻는 질문</h2>
+        <div>
+          <div class="faq-item">
+            <div class="faq-question">❓ 강서 애플의 가격대는 어느 정도인가요?</div>
+            <div class="faq-answer">합리적인 가격으로 프리미엄 서비스를 제공합니다. 정확한 가격은 전화(010-3778-6425)로 확인해주세요.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">❓ 마곡역에서 얼마나 가까운가요?</div>
+            <div class="faq-answer">마곡역 인근에 위치하여 접근성이 매우 좋습니다. 편리한 위치에서 최고의 서비스를 경험하세요.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">❓ 미리 예약해야 하나요?</div>
+            <div class="faq-answer">전화(010-3778-6425)로 간단하게 예약할 수 있습니다. 언제든 편하게 연락주세요.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">❓ 단체 예약이 가능한가요?</div>
+            <div class="faq-answer">물론입니다. 단체 예약도 환영하며 최고의 경험을 제공하겠습니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">❓ 몇 시부터 몇 시까지 운영하나요?</div>
+            <div class="faq-answer">24시간 운영하므로 언제든 방문 가능합니다. 편한 시간에 찾아주세요.</div>
+          </div>
+        </div>     </div>
+    </section>
+
+    <section style="margin: 4rem 0; padding: 3rem 0; border-top: 1px solid rgba(212, 175, 55, 0.2); border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem; font-family: 'Playfair Display', serif; color: #d4af37;">강서 애플의 특별한 경험</h2>
+        <p style="text-align: center; color: #b0b0b0; font-size: 1rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+          강서 애플은 단순한 셔츠룸이 아닙니다. 우리는 각 고객의 개성과 필요에 맞춘 맞춤형 경험을 제공합니다. 복잡한 시스템 없이 순수하게 즐거운 시간만을 선사하며, 친절한 스태프가 항상 최선을 다합니다. 마곡역 인근에서 가장 따뜻한 분위기를 경험하고 싶다면 <a href="tel:010-3778-6425" style="color: #ff00ff; font-weight: bold; text-decoration: underline;">전화문의</a>로 연락주세요.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <h3>강서 애플</h3>
+        <p>마곡/화곡 최고의 힐링 공간</p>
+        <a href="tel:010-3778-6425" class="footer-phone">📞 010-3778-6425</a>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem;">카카오톡: inhighg | 24시간 연중무휴</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+          const item = this.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+
+      document.querySelectorAll('.nav-phone, .footer-phone, .cta-button').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          if (this.href && this.href.startsWith('tel:')) {
+            window.location.href = this.href;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
